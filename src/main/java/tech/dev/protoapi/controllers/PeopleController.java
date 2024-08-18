@@ -45,7 +45,7 @@ public class PeopleController {
         return String.format("created %d people", quantity);
     }
 
-    @PostMapping("/create-person")
+    @PostMapping
     public ResponseEntity<Person> createPerson(@RequestBody Person person) {
         Person personSaved = peopleService.createPerson(person);
         return ResponseEntity.created(
